@@ -1,0 +1,40 @@
+:root {
+  --ink: #17221c;
+  --sub: #55645b;
+  --line: #dfe5e1;
+  --bg: #ffffff;
+  --soft: #f2f7f4;
+  --accent: #1f7a52;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --ink: #e8eeea; --sub: #a3b0a8; --line: #2f3a34; --bg: #121815; --soft: #1a221e; --accent: #4cbb89; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 16px/1.8 system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Yu Gothic UI", Meiryo, sans-serif;
+}
+a { color: var(--accent); }
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+header.site { border-bottom: 1px solid var(--line); }
+header.site .wrap { display: flex; align-items: center; gap: 10px; min-height: 60px; flex-wrap: wrap; }
+header.site a.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 700; }
+header.site img { width: 30px; height: 30px; }
+header.site nav { margin-left: auto; display: flex; gap: 16px; font-size: 14px; }
+.hero { background: var(--soft); padding: 48px 0 40px; }
+.hero h1 { font-size: clamp(28px, 5vw, 40px); line-height: 1.3; margin: 0 0 12px; }
+.hero p { margin: 0 0 8px; color: var(--sub); font-size: 18px; }
+.hero img.shot { display: block; width: 100%; height: auto; margin-top: 28px; border-radius: 12px; border: 1px solid var(--line); }
+main { padding: 32px 0 56px; }
+h2 { font-size: 22px; margin: 40px 0 12px; line-height: 1.4; }
+h3 { font-size: 17px; margin: 24px 0 8px; }
+ul { padding-left: 1.3em; }
+li { margin: 4px 0; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; display: block; overflow-x: auto; }
+th, td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; vertical-align: top; }
+th { background: var(--soft); white-space: nowrap; }
+.note { color: var(--sub); font-size: 14px; }
+footer { border-top: 1px solid var(--line); padding: 20px 0 32px; color: var(--sub); font-size: 14px; }
+footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; }
